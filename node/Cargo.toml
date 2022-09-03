@@ -1,5 +1,5 @@
 [package]
-name = "node-template"
+name = "node"
 version = "4.0.0-dev"
 description = "A fresh FRAME-based Substrate node, ready for hacking."
 authors = ["Substrate DevHub <https://github.com/substrate-developer-hub>"]
@@ -14,7 +14,7 @@ build = "build.rs"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [[bin]]
-name = "node-template"
+name = "node"
 
 [dependencies]
 clap = { version = "3.1.18", features = ["derive"] }
@@ -57,7 +57,7 @@ frame-benchmarking = { version = "4.0.0-dev", git = "https://github.com/parityte
 frame-benchmarking-cli = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.26" }
 
 # Local Dependencies
-node-template-runtime = { version = "4.0.0-dev", path = "../runtime" }
+node-runtime = { version = "4.0.0-dev", path = "../runtime" }
 
 # CLI-specific dependencies
 try-runtime-cli = { version = "0.10.0-dev", optional = true, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.26" }
@@ -67,7 +67,7 @@ substrate-build-script-utils = { version = "3.0.0", git = "https://github.com/pa
 
 [features]
 default = []
-runtime-benchmarks = ["node-template-runtime/runtime-benchmarks"]
+runtime-benchmarks = ["node-runtime/runtime-benchmarks"]
 # Enable features that allow the runtime to be tried and debugged. Name might be subject to change
 # in the near future.
-try-runtime = ["node-template-runtime/try-runtime", "try-runtime-cli"]
+try-runtime = ["node-runtime/try-runtime", "try-runtime-cli"]
