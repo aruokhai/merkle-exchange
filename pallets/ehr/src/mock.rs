@@ -137,17 +137,7 @@ impl ExternalityBuilder {
 		const PHRASE: &str =
 			"expire stage crawl shell boss any story swamp skull yellow bamboo copy";
 
-		let (mut offchain, offchain_state) = testing::TestOffchainExt::new();
-		offchain.local_storage_set(StorageKind::PERSISTENT, "token_url".as_bytes(), "http://localhost:8001".as_bytes());
-		offchain.local_storage_set(StorageKind::PERSISTENT, "client_id".as_bytes(), "http://localhost:8003".as_bytes());
-		offchain.local_storage_set(StorageKind::PERSISTENT, "kid".as_bytes(), "09f1fa89-c4ea-4d81-aa21-2ad3c781435c".as_bytes());
-		offchain.local_storage_set(StorageKind::PERSISTENT, "pem".as_bytes(), "-----BEGIN EC PRIVATE KEY-----
-		MIGkAgEBBDBahrYNyrPLiWSGVQykhp4RAo0Z8swFNRSClT9UPdAOIpSIEKrEabYa
-		+pb17wxynhOgBwYFK4EEACKhZANiAARfAku9SbA5AfyPWxLTIcSHgZC0uTxwJXX1
-		3/JHVjoGdilgc/BzdE2OcsYkgtdCufdVaIG5Hdzlk8rKKzQ5d0vAy8CtvXW5R8rl
-		xAZZq779qywgqMkzPbOxLzdVzuQAo3Y=
-		-----END EC PRIVATE KEY-----
-		".as_bytes());
+		let ( offchain, offchain_state) = testing::TestOffchainExt::new();
 
 		let (pool, pool_state) = testing::TestTransactionPoolExt::new();
 		let keystore = KeyStore::new();

@@ -1974,10 +1974,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4eb1a864a501629691edf6c15a593b7a51eebaa1e8468e9ddc623de7c9b58ec6"
 dependencies = [
  "cfg-if",
- "js-sys",
  "libc",
  "wasi 0.11.0+wasi-snapshot-preview1",
- "wasm-bindgen",
 ]
 
 [[package]]
@@ -2676,9 +2674,9 @@ checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
 
 [[package]]
 name = "libaes"
-version = "0.6.2"
+version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "db7c463b5db4448022fb5829e269bf3a0dd0da21ac18e8e03bf2c5a6e53cc2b8"
+checksum = "bb1f4e141b777ff28016e00e1f2e4846be9d1255f000823d54ea99bb70b3f15b"
 
 [[package]]
 name = "libc"
@@ -3742,7 +3740,7 @@ dependencies = [
 
 [[package]]
 name = "node"
-version = "4.0.0-dev"
+version = "1.0.0-dev"
 dependencies = [
  "clap",
  "frame-benchmarking",
@@ -3793,7 +3791,6 @@ dependencies = [
  "frame-system-benchmarking",
  "frame-system-rpc-runtime-api",
  "frame-try-runtime",
- "getrandom 0.2.7",
  "hex-literal",
  "pallet-aura",
  "pallet-balances",

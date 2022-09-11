@@ -23,11 +23,11 @@ impl sc_executor::NativeExecutionDispatch for ExecutorDispatch {
 	type ExtendHostFunctions = ();
 
 	fn dispatch(method: &str, data: &[u8]) -> Option<Vec<u8>> {
-		node_template_runtime::api::dispatch(method, data)
+		node_runtime::api::dispatch(method, data)
 	}
 
 	fn native_version() -> sc_executor::NativeVersion {
-		node_template_runtime::native_version()
+		node_runtime::native_version()
 	}
 }
 
